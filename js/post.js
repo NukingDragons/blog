@@ -23,10 +23,15 @@ function populateHeader(post) {
 	document.getElementById('post-date').textContent   = formatDate(post.date);
 	document.getElementById('post-title').textContent  = post.title;
 
-	if (post.category === 'HTB' && (post.difficulty || post.os)) {
+	if (post.category === 'HTB') {
+		const logoEl  = document.getElementById('post-logo');
 		const metaBar = document.getElementById('post-htb-meta');
 		const diffEl  = document.getElementById('htb-difficulty');
 		const osEl    = document.getElementById('htb-os');
+
+		logoEl.innerHTML = `<img class="post-logo" src="/posts/${post.path}/logo.png" onerror="this.style.display='none'">`;
+		logoEl.style.display = 'block';
+
 		metaBar.style.display = 'flex';
 		if (post.difficulty) {
 			diffEl.className   = `tag tag-${post.difficulty.toLowerCase()}`;
