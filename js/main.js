@@ -145,10 +145,15 @@ function generateHTBCards(posts, index, slice) {
 		return `
 			<a class="htb-card${iHateCssClass}" href="/post.html?post=${encodeURIComponent(m.path)}">
 				<div class="card-top">
-					<div class="card-name">${m.title}</div>
-					${icon}
+					<img class="card-logo" src="/posts/${m.path}/logo.png" onerror="this.style.display='none'">
+					<div class="card-body">
+						<div class="card-name-row">
+							<div class="card-name">${m.title}</div>
+							${icon}
+						</div>
+						<div class="card-tags">${tags}</div>
+					</div>
 				</div>
-				<div class="card-tags">${tags}</div>
 				<div class="card-date">${formatDate(m.date)}</div>
 				<div class="card-desc">${m.description}</div>
 				${recentLabel}
