@@ -4,3 +4,13 @@ category = "posts"
 title = "First Post"
 description = "The very first post on my blog"
 date = "2026-04-24"
+
+[[post]]
+path = "htb-silentium"
+category = "HTB"
+title = "Silentium"
+description = "This writeup is encrypted. Enter the md5sum of /etc/shadow to decrypt"
+date = "2026-05-02"
+difficulty = "Easy"
+os = "Linux"
+active = true
