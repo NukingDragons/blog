@@ -204,3 +204,17 @@ function generatePostRows(posts, index, slice) {
 
 	return rows;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	const toggle = document.querySelector('.nav-toggle');
+	const links  = document.querySelector('.nav-links');
+
+	toggle?.addEventListener('click', () => {
+		links.classList.toggle('open');
+		toggle.classList.toggle('open');
+	});
+
+	links?.querySelectorAll('a').forEach(a => {
+		a.addEventListener('click', () => links.classList.remove('open'));
+	});
+});
