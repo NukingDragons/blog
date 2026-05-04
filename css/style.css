@@ -911,10 +911,7 @@ section {
 		color: var(--pink-dim);
 		font-size: 0.95rem;
 		cursor: pointer;
-		padding-top: 0.15rem;
-		padding-bottom: 0.35rem;
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
+		padding: 0.3rem;
 		font-family: var(--mono);
 		line-height: 1;
 		transition: color 0.15s, border-color 0.15s;
